@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Portfolio</title>
+  <style>
+    /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* About Section */
+#about {
+  background-color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2rem;
+}
+
+#about p {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Projects Section */
+#projects {
+  background-color: #f4f4f4;
+  padding: 2rem;
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project {
+  display: inline-block;
+  width: 45%;
+  margin: 10px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.project p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Contact Section */
+#contact {
+  background-color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+form input, form textarea {
+  width: 80%;
+  padding: 1rem;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+
+form button:hover {
+  background-color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header id="home">
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Your Name</h1>
+      <p>Frontend Developer | Web Designer | Enthusiast</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm Santhoshi, a passionate web developer specializing in creating responsive and user-friendly websites. I love to explore new technologies and design patterns to make intuitive user interfaces.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project">
+      <img src="http://127.0.0.1:5500/04/03/25.html" alt="Project 1">
+      <h3>Project Title 1</h3>
+      <p>Description of your first project goes here. It can be a personal website, a web app, or anything you've worked on.</p>
+    </div>
+    <div class="project">
+      <img src="http://127.0.0.1:5500/04/03/04.2.html" alt="Project 2">
+      <h3>Project Title 2</h3>
+      <p>Description of your second project goes here.</p>
+    </div>
+    <!-- Add more projects as needed -->
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="submit_form.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
