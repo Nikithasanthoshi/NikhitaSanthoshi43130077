@@ -1,13 +1,34 @@
 
-show databases; 
+
+show databases;
+create database sathyabama;
 use sathyabama;
-create table ECE( name varchar(20), age int, skill varchar(20));
-create table CSE( name varchar(20), age int, skill varchar(20));
-INSERT INTO ECE values('benny',20,'python');
+create table CSE(regno int,name varchar(20),dept varchar(10));
+create table ECE(regno int,name varchar(20),dept varchar(10));
+
+insert into CSE values(001,'vaishali','CSE');
+insert into CSE values(002,'sangeetha','CSE');
+insert into CSE values(003,'swetha','CSE');
+insert into ECE values(001,'nikitha','ECE');
+insert into ECE values(002,'zahra','ECE');
+insert into ECE values(003,'priya','ECE');
+
+select * from CSE;
+select * from ECE;
+
+alter table CSE add column marks int;
+
+update CSE set marks = 99 where dept = 'CSE';
+
+truncate table ece;
+
 drop table ece;
-drop table cse;
-INSERT INTO ECE values('zahra',20,'python');
-INSERT INTO CSE values('vaishali',20,'java');
-INSERT INTO CSE values('nikitha',20,'html');
-select*from CSE;
-select*from Ece;
+
+DELETE FROM CSE WHERE regno = 002;
+
+START TRANSACTION;
+INSERT INTO CSE VALUES (004,'lavanya','CSE',95);
+SAVEPOINT sp1;
+INSERT INTO CSE VALUES (005,'harini','CSE',90);
+ROLLBACK TO sp1;
+COMMIT;
