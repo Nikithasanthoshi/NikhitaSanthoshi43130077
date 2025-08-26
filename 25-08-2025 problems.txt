@@ -1,0 +1,66 @@
+CREATE TABLE Students (
+    StudentID INT,
+    Name VARCHAR(50),
+    Marks INT
+);
+
+INSERT INTO Students VALUES
+(1, 'Ravi', 20),
+(2, 'Priya', 40),
+(3, 'Anil', 47),
+(4, 'Kiran', 55),
+(5, 'Meena', 70),
+(6, 'Sita', 85);
+
+SELECT 
+    Name,
+    Marks,
+    CASE
+        WHEN Marks < 25 THEN 'F'
+        WHEN Marks BETWEEN 25 AND 44 THEN 'E'
+        WHEN Marks BETWEEN 45 AND 49 THEN 'D'
+        WHEN Marks BETWEEN 50 AND 59 THEN 'C'
+        WHEN Marks BETWEEN 60 AND 80 THEN 'B'
+        ELSE 'A'
+    END AS Grade
+FROM Students;
+
+2. Check Square or Not
+
+CREATE TABLE Shapes (
+    ShapeID INT,
+    Length INT,
+    Breadth INT
+);
+
+INSERT INTO Shapes VALUES
+(1, 5, 5),   -- Square
+(2, 10, 5);  -- Rectangle
+
+SELECT 
+    ShapeID,
+    Length,
+    Breadth,
+    CASE 
+        WHEN Length = Breadth THEN 'Square'
+        ELSE 'Rectangle'
+    END AS ShapeType
+FROM Shapes;
+
+3. Absolute Value of a Number
+
+SELECT ABS(-1) AS AbsoluteValue;  
+SELECT ABS(1)  AS AbsoluteValue;  
+CREATE TABLE Numbers (
+    Num INT
+);
+
+INSERT INTO Numbers VALUES (-10), (0), (15);
+
+SELECT 
+    Num,
+    ABS(Num) AS AbsoluteValue
+FROM Numbers;
+
+
+
