@@ -1,0 +1,44 @@
+show databases; 
+use sathyabama;
+create table ECE( name varchar(20), age int, skill varchar(20),Marks int);
+create table CSE( name varchar(20), age int, skill varchar(20));
+INSERT INTO ECE values('benny',20,'python',32);
+
+drop table ece;
+drop table cse;
+INSERT INTO CSE values('vaishali',20,'java');
+INSERT INTO ECE values('zahra',20,'python',49);
+INSERT INTO CSE values('nikitha',20,'html');
+select*from CSE;
+select*from Ece;
+alter table Ece add column Email varchar(100);
+alter table ece change Email Stemail varchar(20);
+select*from Ece where age>=20 and Marks>20;
+select*from Ece where age>=20 Or Marks>20;
+select*from Ece where age>=20 or Marks>50;
+select*from Ece where not  age>=20  ;
+select*from Ece where not  marks<50 ;
+select*from Ece where  age!=20;
+select*from Ece where age=20;
+select*from Ece where marks In (32,49) and marks>50;
+select*from Ece where marks In (49) and marks<50;
+select*from Ece where marks not in (32,49) and age>=20;
+select*from Ece where marks not In (32) and age>=20;
+select *from Ece where marks between 32 and 40 ;  
+SELECT 
+    name,
+    age,
+    skill,
+    Marks,
+    CASE
+        WHEN Marks < 25 THEN 'F'
+        WHEN Marks BETWEEN 25 AND 44 THEN 'E'
+        WHEN Marks BETWEEN 45 AND 49 THEN 'D'
+        WHEN Marks BETWEEN 50 AND 59 THEN 'C'
+        WHEN Marks BETWEEN 60 AND 80 THEN 'B'
+        ELSE 'A'
+    END AS Grade
+FROM ECE;
+
+
+
