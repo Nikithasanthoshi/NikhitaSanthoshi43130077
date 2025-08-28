@@ -25,6 +25,11 @@ select*from Ece where marks In (49) and marks<50;
 select*from Ece where marks not in (32,49) and age>=20;
 select*from Ece where marks not In (32) and age>=20;
 select *from Ece where marks between 32 and 40 ;  
+select min(marks) as Min_marks from Ece;
+select max(marks) as max_marks from Ece;
+select avg(marks) as avg_marks from Ece;
+select sum(marks) as Total_marks from Ece;
+select age ,count(age) from Ece;
 SELECT 
     name,
     age,
@@ -39,6 +44,7 @@ SELECT
         ELSE 'A'
     END AS Grade
 FROM ECE;
+
 
 
 
