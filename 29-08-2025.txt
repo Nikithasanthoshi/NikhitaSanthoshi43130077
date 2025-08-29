@@ -1,0 +1,135 @@
+show databases; 
+use sathyabama;
+create table ECE( name varchar(20), age int, skill varchar(20),Marks int);
+create table CSE( name varchar(20), age int, skill varchar(20),Marks int);
+INSERT INTO ECE values('benny',20,'python',32);
+drop table ece;
+drop table cse;
+INSERT INTO CSE values('vaishali',20,'java',43);
+INSERT INTO ECE values('zahra',20,'python',49);
+insert into Cse values('swetha',18,'html',33);
+INSERT INTO CSE values('nikitha',20,'html',25);
+insert into Cse values('akshu',22,'html',42);
+select*from CSE;
+select*from Ece;
+alter table Ece add column Email varchar(100);
+alter table ece change Email Stemail varchar(20);
+select*from Ece where age>=20 and Marks>20;
+select*from Ece where age>=20 Or Marks>20;
+select*from Ece where age>=20 or Marks>50;
+select*from Ece where not  age>=20  ;
+select*from Ece where not  marks<50 ;
+select*from Ece where  age!=20;
+select*from Ece where age=20;
+select*from Ece where marks In (32,49) and marks>50;
+select*from Ece where marks In (49) and marks<50;
+select*from Ece where marks not in (32,49) and age>=20;
+select*from Ece where marks not In (32) and age>=20;
+select *from Ece where marks between 32 and 40 ;  
+insert into ece values('siva',19,'python',30);
+insert into ece values('santhoshi',18,'python',45);
+SELECT 
+    name,
+    age,
+    skill,
+    Marks,
+    CASE
+        WHEN Marks < 25 THEN 'F'
+        WHEN Marks BETWEEN 25 AND 44 THEN 'E'
+        WHEN Marks BETWEEN 45 AND 49 THEN 'D'
+        WHEN Marks BETWEEN 50 AND 59 THEN 'C'
+        WHEN Marks BETWEEN 60 AND 80 THEN 'B'
+        ELSE 'A'
+    END AS Grade
+FROM ECE;
+select*from ECe order by marks desc ;
+select sum(marks) from Ece group by skill;
+select age, count(age)from ece group by age;
+select*from Ece order by marks desc limit 2 OFFSET 1;
+
+select 
+    upper(name) as Student_Name,
+    age,
+    skill,
+    Marks,
+    case
+        when Marks < 25 then 'F'
+        when Marks between 25 and 44 then 'E'
+        when Marks between 45 and 49 then 'D'
+        when Marks between 50 and 59 then 'C'
+        when Marks between 60 and 80 then 'B'
+        else 'A'
+    end as Grade
+from ECE;
+select 
+    lower(skill) as Student_Skill,
+    age,
+    name,
+    Marks,
+    case
+        when Marks < 25 then 'F'
+        when Marks between 25 and 44 then 'E'
+        when Marks between 45 and 49 then 'D'
+        when Marks between 50 and 59 then 'C'
+        when Marks between 60 and 80 then 'B'
+        else 'A'
+    end as Grade
+from ECE;
+SELECT 
+    e.name AS Ece_Student,
+    e.skill AS Ece_Skill,
+    e.marks AS Ece_Marks,
+    c.name AS Cse_Student,
+    c.skill AS Cse_Skill,
+    c.marks AS Cse_Marks
+FROM Ece e
+INNER JOIN Cse c
+ON e.skill = c.skill;
+SELECT 
+    e.name AS Ece_Student,
+    e.skill AS Ece_Skill,
+    c.name AS Cse_Student,
+    c.skill AS Cse_Skill
+FROM Ece e
+LEFT JOIN Cse c
+ON e.skill = c.skill;
+SELECT 
+    c.name AS Cse_Student,
+    c.skill AS Cse_Skill,
+    e.name AS Ece_Student,
+    e.skill AS Ece_Skill
+FROM Ece e
+RIGHT JOIN Cse c
+ON e.skill = c.skill;
+SELECT 
+    e.name AS Ece_Student,
+    e.skill AS Ece_Skill,
+    c.name AS Cse_Student,
+    c.skill AS Cse_Skill
+FROM Ece e
+LEFT JOIN Cse c
+ON e.skill = c.skill
+UNION
+SELECT 
+    e.name AS Ece_Student,
+    e.skill AS Ece_Skill,
+    c.name AS Cse_Student,
+    c.skill AS Cse_Skill
+FROM Ece e
+RIGHT JOIN Cse c
+ON e.skill = c.skill;
+SELECT 
+    e.name AS Ece_Student,
+    e.skill AS Ece_Skill,
+    c.name AS Cse_Student,
+    c.skill AS Cse_Skill
+FROM Ece e
+CROSS JOIN Cse c;
+
+
+
+
+
+
+
+
