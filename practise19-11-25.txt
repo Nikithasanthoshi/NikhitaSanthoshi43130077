@@ -13,20 +13,20 @@ class Vehicle
 	String name = "Vaishali";
 	void bike()
 	{
-		System.out.println("santhoshi is riding a bike");
+		System.out.println("Vaishali is riding a bike");
 	}
 	
 	void car()
 	{
-		System.out.println("santhoshi is riding a car");
+		System.out.println("Vaishali is riding a car");
 	}
 }
 class Animal
 {
-	String nme = "Harika";
+	String nme = "Harrish";
 	void dog()
 	{
-		System.out.println("Harika having a pet dog");
+		System.out.println("Harrish having a pet dog");
 	}
 }
 
@@ -123,5 +123,4 @@ class Son2 extends Father
 	{
 		System.out.println("RC KTM 390");
 	}
-
 }	
